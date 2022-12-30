@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #f6fbfd;
+    --bg2-color: #307c91;
+    --bg3-color: #8b929a;
+    --satauri-color: #307c91;
+    --text1-color: #e5e3e4;
+    --text2-color: #b6dce9;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 4rem auto;
+    width: 90%;
+}
+h2{
+    font-size: 2.3rem;
+    color: var(--satauri-color);
+}
+.menu{
+    margin: 1.5rem;
+}
+.menu a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    background: var(--bg2-color);
+    border-radius: 50px;
+    color: var(--text1-color);
+    padding: 8px;
+}
+.menu a:hover{
+    color: var(--text2-color);
+    background-color: var(--bg3-color);
+}
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.store-item{
+    width: 288px;
+    padding: 1rem;
+}
+.store-item img{
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin-top: 10px;
+}
+@media only screen and (max-width: 450px) {
+    .menu{
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: -300px;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        background: none;
+        transition: .3s;
+        height: 1000px;
+        width: 70px;
+    }
+    .menu a{
+        padding: 1rem;
+        display: block;
+        margin-left: 15px;
+        font-size: 0;
+        margin-top: 40px;
+        text-align: center;
+        align-items: center;
+    }
+    .menu.active{
+        transition: 0.5s ease;
+        top: 100px;
+        left: -30px;
+    }
+    #menu-icon{
+        display: block;
+        color: var(--satauri-color);
+        width: 30px;
+        height: 30px;
+    }
+}
